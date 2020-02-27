@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>canvas2</title>
+    <script>
+      onload = function() {
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        var img = new Image();
+        img.onload = function() {
+          ctx.drawImage(img, 0, 0);
+        };
+        img.src = "./cat.png";
+      };
+    </script>
+  </head>
+  <body>
+    <canvas id="myCanvas" width="1980" height="1080"></canvas>
+  </body>
+</html>
